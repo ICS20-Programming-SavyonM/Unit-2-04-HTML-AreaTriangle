@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     
-    <title>Area and Perimeter of a Rectangle, with JavaScript</title>
+    <title>Area of a triangle, with JavaScript</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -24,66 +24,60 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Area and Perimeter, with JS</span>
+          <span class="mdl-layout-title">Area of a triangle, with JavaScript</span>
         </div>
       </header>
+      
       <main class="mdl-layout__content">
         <table>
           <tr>
             <th>
               <!--image on this page-->
-              <img src="./images/triangle-height.png" alt="rectangle" width="75%" height="auto"/>
+              <img src="./images/triangle-height.png" alt="triangle" width="75%" height="auto"/>
             </th>
             <th>
               <h2>Formulas</h2>
-              <h3>A = 1/2 × b × h.</h3>
+              <h3>A = b x h / 2</h3>
             </th>
           </tr>
         </table>
         <!-- Simple Textfield -->
         <form action="#">
-          <p>Length</p>
+          <p>Height</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="length-of-rectangle"
+              id="height-of-triangle"
             />
-            <label class="mdl-textfield__label" for="length-of-rectangle">length ...</label>
+            <label class="mdl-textfield__label" for="height-of-triangle">Height</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
 				
         <!-- Numeric Textfield -->
         <form action="#">
-          <p>Width</p>
+          <p>Base</p>
           <div class="mdl-textfield mdl-js-textfield">
             <input
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="width-of-rectangle"
+              id="base-of-triangle"
             />
-            <label class="mdl-textfield__label" for="width-of-rectangle">width ...</label>
+            <label class="mdl-textfield__label" for="base-of-triangle">Base</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
 				
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()"
-        >
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="calculate()">
           Calculate
         </button>
-        <br />
-        <p>
-          <div id="answers">
-            <div id="area"></div>
-            <div id="perimeter"></div>
-          </div>
-        </p>
+        <br/>
+        <p><div id="area"></div></p>
+          
       </main>
     </div>
   </body>
