@@ -6,7 +6,7 @@
 
 "use strict";
 /**
- * This function calculates area and perimeter of rectangle.
+ * This function calculats area of triangle.
  */
 function calculate() {
 
